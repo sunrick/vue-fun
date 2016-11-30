@@ -1,6 +1,7 @@
 <template>
   <div id="about">
     <p class="main"> well I'm just learning how this stuff works </p>
+    <p class="main"> {{ msg }} </p>
   </div>
 </template>
 
@@ -9,6 +10,7 @@ export default {
   name: 'about',
   data () {
     return {
+      msg: "this text is coming from vue"
     }
   }
 }
