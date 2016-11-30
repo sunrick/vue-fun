@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <p> well I'm just learning how this stuff works </p>
+    <p class="main"> well I'm just learning how this stuff works </p>
   </div>
 </template>
 
@@ -15,4 +15,7 @@ export default {
 </script>
 
 <style lang="sass?indentedSyntax">
+  @import '../assets/variables.sass'
+  .main
+    color: $primary-color
 </style>
