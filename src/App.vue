@@ -1,9 +1,9 @@
 <template>
   <div id="app">
+    <about></about>
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <p> test1 </p>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -21,41 +21,43 @@
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  import About from './components/About.vue'
+  export default {
+    name: 'app',
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
+    },
+    components: {
+      About
     }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass?indentedSyntax">
+  $primary: 'dog'
 
-h1, h2 {
-  font-weight: normal;
-}
+  #app
+    font-family: 'Avenir', Helvetica, Arial, sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-align: center
+    color: #2c3e50
+    margin-top: 60px
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  h1, h2
+    font-weight: normal
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  ul
+    list-style-type: none
+    padding: 0
 
-a {
-  color: #42b983;
-}
+  li
+    display: inline-block
+    margin: 0 10px
+
+  a
+    color: #42b983
+
 </style>
