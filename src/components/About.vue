@@ -1,19 +1,24 @@
 <template>
   <div id="about">
-    <p class="main"> well I'm just learning how this stuff works </p>
-    <p class="main"> {{ msg }} </p>
-    <button @click="show = !show">
-      Toggle
-    </button>
-    <transition
-      v-on:before-enter="beforeEnter"
-      v-on:enter="enter"
-      v-on:leave="leave"
-      v-bind:css="false">
-      <p v-if="show">
-        Demo
-      </p>
-    </transition>
+    <div class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title"> well I'm just learning how this stuff works </h1>
+          <h2 class="subtitle"> {{ msg }} </h2>
+          <button class="button" @click="show = !show">
+            Toggle
+          </button>
+          <transition
+            v-on:before-enter="beforeEnter"
+            v-on:enter="enter"
+            v-on:leave="leave"
+            v-bind:css="false">
+            <p v-if="show">
+              Demo
+            </p>
+          </transition>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -49,7 +54,5 @@ export default {
 </script>
 
 <style lang="sass?indentedSyntax">
-  @import '../assets/variables.sass'
-  .main
-    color: $primary-color
+  @import '../assets/main.sass'
 </style>
